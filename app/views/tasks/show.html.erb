@@ -1,0 +1,18 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p><%= @task.completed %></p>
+
+
+<br>
+  <%= link_to "Ajouter une tâche", new_task_path(@task) %>
+<br>
+<br>
+  <%= link_to "Modifier", edit_task_path(@task) %>
+<br>
+<br>
+  <%= link_to "Supprimer", task_path(@task),
+    data: {turbo_method: "delete", turbo_confirm: "Etes vous sur?"}
+  %>
+<br>
+<br>
+  <%= link_to "Retour à la liste", tasks_path%>
